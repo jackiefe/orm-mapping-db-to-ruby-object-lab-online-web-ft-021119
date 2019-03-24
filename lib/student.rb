@@ -117,7 +117,7 @@ class Student
     SELECT *
     FROM students WHERE grade = ?  
     SQL
-    DB[:conn].execute(sql).collect do |row|
+    DB[:conn].execute(sql, X).collect do |row|
       self.new_from_db(row)
     end.first 
   end 
