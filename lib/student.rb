@@ -96,7 +96,7 @@ class Student
     WHERE grade = 10
     ORDER BY (name)ASC LIMIT 1
     SQL
-    DB[:conn].execute(sql, name).collect do |row|
+    DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end 
   end 
