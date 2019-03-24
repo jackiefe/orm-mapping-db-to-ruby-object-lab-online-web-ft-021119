@@ -118,6 +118,5 @@ class Student
     FROM students WHERE grade = ?
     SQL
     DB[:conn].execute(sql,x)
-    end.first 
   end 
 end
